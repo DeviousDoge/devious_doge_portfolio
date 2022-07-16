@@ -9,7 +9,7 @@ h1 {
 }
 
 h2 {
-    margin: 15px;
+    margin: 30px;
     font-size:3.6rem;
     font-weight: bold;
     text-shadow: 1px 1px 1px #000b1a;
@@ -19,9 +19,15 @@ h3 {
     font-size:3.4rem;
 }
 
+p {
+    font-size:1.6rem;
+}
+
+
 .top {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: #251607;
   color: #ffeacb;
@@ -38,17 +44,12 @@ h3 {
 
   .top ul {
   display:flex;
-  flex-wrap:wrap;
   justify-content: space-between;
   align-items:flex-start;
   margin-right: 30px;
   margin-top: 15px;
   font-size: 2rem;
   text-decoration: underline;
- 
-  
-  
-  
   }
 
   .top li {
@@ -73,3 +74,27 @@ h3 {
     margin-top: 10px;
     margin-bottom: 10px;
   }
+
+  
+
+  .about {
+    display:flex;
+    flex-direction: row;
+    justify-content:space-around;
+    flex-wrap: wrap;
+  }
+  .about h2 {
+    margin-left: 50px;
+    align-items:flex-end;
+  }
+  
+  .about p {
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-left:50px;
+    max-width:1000px;
+   
+  }
+
+
+  
