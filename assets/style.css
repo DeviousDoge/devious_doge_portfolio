@@ -17,6 +17,7 @@ h2 {
 
 h3 {
     font-size:3.4rem;
+   
 }
 
 p {
@@ -133,4 +134,17 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     margin: 1.5%;
   }
 
+  span.emoji{
+    display:none;
+  }
+
+  .bottom:hover span.default,
+  .bottom:focus span.default{
+    display:none;
+  }
+
+  .bottom:hover span.emoji,
+  .bottom:focus span.emoji{
+    display:block;
+  }
   
