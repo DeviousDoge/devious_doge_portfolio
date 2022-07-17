@@ -20,15 +20,16 @@ h3 {
 }
 
 p {
-    font-size:1.6rem;
+    font-family: sans-serif;
+    font-size: 1.8rem;
 }
 
 
 .top {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
   background-color: #251607;
   color: #ffeacb;
   }
@@ -46,6 +47,7 @@ p {
   display:flex;
   justify-content: space-between;
   align-items:flex-start;
+  flex-wrap: wrap;
   margin-right: 30px;
   margin-top: 15px;
   font-size: 2rem;
@@ -80,21 +82,44 @@ p {
   .about {
     display:flex;
     flex-direction: row;
-    justify-content:space-around;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
+  
   .about h2 {
+    align-items: flex-end;
     margin-left: 50px;
-    align-items:flex-end;
+    
   }
   
   .about p {
+    
     margin-top: 20px;
     margin-right: 30px;
     margin-left:50px;
-    max-width:1000px;
+    max-width:1500px;
    
   }
 
+  .work {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .work h2 {
+    align-items: flex-end;
+    margin-left: 50px;
+  }
+  
+  .work figure {
+    
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-left:50px;
+  }
+
+ 
 
   
