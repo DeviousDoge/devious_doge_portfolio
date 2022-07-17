@@ -30,13 +30,18 @@ p {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: #251607;
+  /* background-color: #251607; */
+  background: rgb(2,0,36);
+  background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba(0,212,255,1) 100%);
   color: #ffeacb;
   }
   
   .top h1 {
-    background-color: #070f25;
-    text-shadow: 5px 5px black;
+    /* background-color: #070f25; */
+    background-color: 	#ff2b00;
+    text-shadow: 5px 2px black;
+    border-radius: 10px;
     padding-left: 50px;
     padding-right: 10px;
     margin-top: 10px;
@@ -64,13 +69,17 @@ p {
     flex-direction: row-reverse;
     justify-content: space-between;
     padding: 5px;
-    background-color: #1a1205;
+    /* background-color: #1a1205; */
+    background: rgb(2,0,36);
+    background: linear-gradient(87deg, rgba(2,0,36,1) 0%, rgba(26,18,5,1) 35%, rgba(0,212,255,1) 100%);
     color: #ffeacb;
   }
   
   .bottom h3 {
-    background-color: #050a1a;
-    text-shadow: 3px 3px black;
+    /* background-color: #050a1a; */
+    background-color: 	#ff2b00;
+    border-radius: 10px;
+    text-shadow: 3px 1px black;
     padding-right: 20px;
     padding-left: 10px;
     margin-top: 10px;
@@ -80,14 +89,13 @@ p {
   main {
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     
   }
 
   .block {
     display:flex;
     flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
   }
 
@@ -117,5 +125,12 @@ p {
     display: inline-block;
     font-size: 2.2rem;
    }
+
+  h2:hover::after,
+  h2:focus::after {
+    content:'🐕';
+    font-size: 2.4rem;
+    margin: 1.5%;
+  }
 
   
