@@ -60,7 +60,6 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   margin-right: 30px;
   margin-top: 15px;
   font-size: 2rem;
-  text-decoration: underline;
   }
 
   .top li {
@@ -154,8 +153,27 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     display:block;
   }
 
-  .top a {
+  a:link {
     text-decoration: none;
+    color:#00327d;
+  }
+
+  a:link:visited {
+    color:#00327d;
+  }
+
+    a:link:hover,
+    a:link:focus  {
+    text-decoration: underline;
+  }
+
+  a:link:active {
+    text-decoration: underline;
+    color: black;
+  }
+
+
+  .top a {
     color:#ffeacb;
   }
   
@@ -164,12 +182,26 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     color:white;
   }
 
+ 
+
   /* Any time the screen is small enough to wrap the .right div under 
   .left */
 
   @media screen and (min-width: 1789px) {
     .block  {
      justify-content: space-between;
+    }
+
+    .left {
+      border-right: 2px solid #00327d;
+      margin-top: 50px;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-right: 50px;
+    }
+    #contacts {
+      margin-right: 223px;
     }
   }
 
@@ -180,13 +212,19 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   align-items: center;
  }
  
+ .left {
+  width:auto
+ }
 
   h2 {
   max-width: fit-content;
   border-radius: 10px;
-  background-color: #ffeacb;
-  color: #d0cbff;
+  background-color: #7fb2ff;
   padding: 5px;
   /* margin: none; */
+ }
+
+ #contacts {
+  margin-bottom: 50px;
  }
   }
