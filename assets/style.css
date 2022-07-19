@@ -1,41 +1,44 @@
+/* Designed with desktop monitors in mind first */
 body {
-    
     color: #00327d;
     background-color: #cbe0ff;
 }
-
+/* Top-left header */
 h1 {
     font-size:5.4rem;
     font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
 }
-
+/* Headers of the .left class */
 h2 {
     margin: 30px;
     font-size:3.6rem;
     font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
     text-shadow: 1px 1px 1px #000b1a;
 }
-
+/* top right header */
 h3 {
     font-size:3.4rem;
-   
+   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+/* Image Headers */
 h4 {
   font-size:3rem;
   font-weight:bold;
-  text-decoration: underline;
   text-align:center;
+  text-shadow: 1px 1px 1px #000b1a;
 }
-
+/* About Me Body */
 p {
+    text-align: center;
     text-indent: 15px;
     margin-bottom: 50px;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.8rem;
 }
 
-
+/* Upper Header */
 .top {
   display: flex;
   flex-direction: row;
@@ -46,7 +49,7 @@ p {
 background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba(0,212,255,1) 100%);
   color: #ffeacb;
   }
-  
+  /* Upper header top left text */
   .top h1 {
     background-color: 	#ff2b00;
     text-shadow: 5px 2px black;
@@ -56,7 +59,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     margin-top: 10px;
     margin-bottom: 10px;
   }
-
+  /* Navbar */
   .top ul {
   display:flex;
   justify-content: space-between;
@@ -66,12 +69,12 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   margin-top: 15px;
   font-size: 2rem;
   }
-
+  /* Upper header top right text */
   .top li {
     margin-left: 20px;
     text-shadow: 2px 2px rgb(34, 30, 30);
   }
-
+  /* Lower header */
   .bottom {
     display: flex;
     flex-direction: row-reverse;
@@ -81,7 +84,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     background: linear-gradient(87deg, rgba(2,0,36,1) 0%, rgba(26,18,5,1) 35%, rgba(0,212,255,1) 100%);
     color: #ffeacb;
   }
-  
+  /* Lower Header Top Right Text */
   .bottom h3 {
     background-color: 	#ff2b00;
     border-radius: 10px;
@@ -106,11 +109,11 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     justify-content: space-around;
   }
 
-  
+  /* Left Half of Main */
   .block .left {
     margin-left: 50px;
   }
-
+  /* Right half of main */
   .block .right {
     width:1500;
     margin-top: 20px;
@@ -130,7 +133,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   .left {
     width: 175px;
   }
-
+  /* .work image cards underneath the top image */
   .small {
     display: flex;
     flex-direction: row;
@@ -141,7 +144,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   .small img {
     margin-top: 15px;
   }
-
+  /* Hides the header over the top image in favor of the overlay for larger screens */
   .big h4 {
     display:none;
   }
@@ -168,7 +171,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     opacity: 1;
   }
 
-
+   /* Bottom right text */
    #contacts li {
     margin-top: 50px;
     margin-left: 50px;
@@ -180,10 +183,11 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   h2:hover::after,
   h2:focus::after {
     content:'🐕';
+    display: inline-block;
     font-size: 2.4rem;
-    margin: 1.5%;
+    margin-left:10px;
   }
-
+  /* Hides H3 emoji until hover */
   span.emoji{
     display:none;
   }
@@ -193,17 +197,17 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   .bottom:focus span.default{
     display:none;
   }
-
+  /* Displays h3 emoji */
   .bottom:hover span.emoji,
   .bottom:focus span.emoji{
     display:block;
   }
-
+  /* removes link underlines */
   a:link {
     text-decoration: none;
     color:#00327d;
   }
-
+  
   a:link:visited {
     color:#00327d;
   }
@@ -255,6 +259,8 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   .left */
 
   @media screen and (max-width: 1789px) {
+  
+   
 
  .block {
   flex-direction: column;
@@ -263,26 +269,36 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
  
  .left {
   width:auto;
+  margin-top:30px;
  }
+ 
  .right {
   padding-top: 30px;
   border-top:2px solid #00327d;
  }
 
-  h2 {
+  .left h2 {
+  display:inline;
   text-align:center;
   max-width: fit-content;
   border-radius: 10px;
   background-color: #7fb2ff;
   padding: 5px;
-  /* margin: none; */
  }
 
  #contacts {
   margin-bottom: 50px;
  }
   }
-
+  
+  /* Unique properties to the four small image cards for larger screens */
+  @media screen and (min-width: 1274px) {
+    .smallimage img {
+      border: 4px dashed #00327d;
+    }
+  }
+  
+  /* Unique properties to the image cards for smaller screens */
   @media screen and (max-width: 1274px) {
     .overlay {
       display:none;
