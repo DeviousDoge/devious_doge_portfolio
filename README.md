@@ -27,13 +27,13 @@ Upon building and designing this webpage I learned a great deal about more advan
 
 ## Usage
 
-##Desktop
+## Desktop
 ![desktop](assets/images/fullsize.png "Desktop")
 
-##Tablet
+## Tablet
 ![tablet](assets/images/iPad%20Air%20.png "Tablet")
 
-##Mobile
+## Mobile
 ![mobile](assets/images/iPhone%20SE.png "Mobile")
 
 ## Credits
