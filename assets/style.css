@@ -1,5 +1,5 @@
 body {
-    /* line-height:1.5; */
+    
     color: #00327d;
     background-color: #cbe0ff;
 }
@@ -21,6 +21,13 @@ h3 {
    
 }
 
+h4 {
+  font-size:3rem;
+  font-weight:bold;
+  text-decoration: underline;
+  text-align:center;
+}
+
 p {
     text-indent: 15px;
     margin-bottom: 50px;
@@ -34,7 +41,6 @@ p {
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* background-color: #251607; */
   background: rgb(2,0,36);
   background: rgb(2,0,36);
 background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba(0,212,255,1) 100%);
@@ -42,7 +48,6 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   }
   
   .top h1 {
-    /* background-color: #070f25; */
     background-color: 	#ff2b00;
     text-shadow: 5px 2px black;
     border-radius: 10px;
@@ -72,14 +77,12 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     flex-direction: row-reverse;
     justify-content: space-between;
     padding: 5px;
-    /* background-color: #1a1205; */
     background: rgb(2,0,36);
     background: linear-gradient(87deg, rgba(2,0,36,1) 0%, rgba(26,18,5,1) 35%, rgba(0,212,255,1) 100%);
     color: #ffeacb;
   }
   
   .bottom h3 {
-    /* background-color: #050a1a; */
     background-color: 	#ff2b00;
     border-radius: 10px;
     text-shadow: 3px 1px black;
@@ -89,17 +92,17 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     margin-bottom: 10px;
   }
 
+  /* sets the .blocks along the column axis */
   main {
     display:flex;
     flex-direction: column;
-    /* justify-content: space-around; */
     
   }
 
+  /* sets .left and .right along a row within .block */
   .block {
     display:flex;
     flex-direction: row;
-    /* flex-wrap: wrap; */
     justify-content: space-around;
   }
 
@@ -116,6 +119,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     margin-right:50px;
   }
 
+/* center aligns my picture */
   #me {
     display: block;
     margin-left: auto;
@@ -124,10 +128,25 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   }
 
   .left {
-    /* align-items:flex-start; */
     width: 175px;
   }
+
+  .small {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .small img {
+    margin-top: 15px;
+  }
+
+  .big h4 {
+    display:none;
+  }
   
+  /* code for the overlay modified slightly from a w3 schools snippit */
   .overlay {
     position:relative;
     bottom: 0;
@@ -149,11 +168,6 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     opacity: 1;
   }
 
-/* #contact {
-    display:flex;
-    justify-content: space-between;
-    flex-wrap:wrap;
-} */
 
    #contacts li {
     margin-top: 50px;
@@ -162,6 +176,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     font-size: 2.2rem;
    }
 
+   /* 🐕 on h2 after hover */
   h2:hover::after,
   h2:focus::after {
     content:'🐕';
@@ -173,6 +188,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     display:none;
   }
 
+  /* code to turn h3=Devious Doge into 🐕 upon hover */
   .bottom:hover span.default,
   .bottom:focus span.default{
     display:none;
@@ -203,6 +219,8 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   }
 
 
+  /* code to specifically apply to the navbar links, giving them unique
+  properties */
   .top a {
     color:#ffeacb;
   }
@@ -214,9 +232,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
 
  
 
-  /* Any time the screen is small enough to wrap the .right div under 
-  .left */
-
+  /* Content unique to default desktop layout */
   @media screen and (min-width: 1789px) {
     .block  {
      justify-content: space-between;
@@ -235,6 +251,9 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     }
   }
 
+  /* Any time the screen is small enough to wrap the .right div under 
+  .left */
+
   @media screen and (max-width: 1789px) {
 
  .block {
@@ -251,6 +270,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
  }
 
   h2 {
+  text-align:center;
   max-width: fit-content;
   border-radius: 10px;
   background-color: #7fb2ff;
@@ -263,6 +283,35 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
  }
   }
 
+  @media screen and (max-width: 1274px) {
+    .overlay {
+      display:none;
+    }
+
+    .smallimage {
+      margin:50px;
+    }
+    .smallimage img {
+      margin-top: 30px;
+      width: 1500px;
+    }
+
+    h4 {
+      font-size:3.6rem;
+    }
+
+    .big h4 {
+      display:block;
+    }
+    
+    .big img {
+      margin-top: 30px;
+    }
+
+    
+  }
+
+  /* Optimizing the contact me section for tablets and small laptops */
   @media screen and (max-width: 1000px) {
 
     
@@ -278,6 +327,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
 
     }
 
+    /* Unique properties for mobile-sized screens */
     @media screen and (max-width: 600px) { 
 
       main {
