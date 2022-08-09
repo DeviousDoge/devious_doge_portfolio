@@ -32,10 +32,15 @@ h4 {
 /* About Me Body */
 p {
     text-align: center;
-    text-indent: 15px;
+    text-indent: 10px;
     margin-bottom: 50px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.8rem;
+}
+.pcontainer {
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 /* Upper Header */
@@ -51,7 +56,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   }
   /* Upper header top left text */
   .top h1 {
-    background-color: 	#ff2b00;
+    background-color: salmon;
     text-shadow: 5px 2px black;
     border-radius: 10px;
     padding-left: 50px;
@@ -86,7 +91,7 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   }
   /* Lower Header Top Right Text */
   .bottom h3 {
-    background-color: 	#ff2b00;
+    background-color: 	salmon;
     border-radius: 10px;
     text-shadow: 3px 1px black;
     padding-right: 20px;
@@ -124,7 +129,9 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
 
 /* center aligns my picture */
   #me {
-    display: block;
+    display:flex;
+    flex-direction: row;
+    /* display: block; */
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 50px;
@@ -139,11 +146,16 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    /* max-height: 333px; */
   }
 
   .small img {
     margin-top: 15px;
+   
   }
+  /* .big {
+    max-height: 1000px;
+  } */
   /* Hides the header over the top image in favor of the overlay for larger screens */
   .big h4 {
     display:none;
@@ -282,7 +294,8 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   text-align:center;
   max-width: fit-content;
   border-radius: 10px;
-  background-color: #7fb2ff;
+  color: #00327d;
+  background-color: white;
   padding: 5px;
  }
 
@@ -300,16 +313,30 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
   
   /* Unique properties to the image cards for smaller screens */
   @media screen and (max-width: 1274px) {
+    #me {
+      height:auto;
+    }
     .overlay {
       display:none;
+    }
+   
+    .big {
+      margin-left:10px;
+      margin-right:10px;
+    }
+    .big img {
+      height:auto;
     }
 
     .smallimage {
       margin:50px;
+      margin-right:10px;
+      margin-left:10px;
     }
     .smallimage img {
       margin-top: 30px;
-      width: 1500px;
+      width: 500px;
+      height:auto;
     }
 
     h4 {
@@ -349,7 +376,10 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
       main {
         background-color: #7fb2ff;
       }
-
+      
+      .pcontainer {
+        margin: 10px;
+      }
       .right {
        background-color: #cbe0ff;
        border-radius: 20px;
@@ -359,7 +389,11 @@ background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(37,22,7,1) 35%, rgba
       img {
         border-radius: 10px;
       }
-
+      
+      #me {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
 
       h2 {
         max-width: none;
